@@ -11,7 +11,7 @@ const Dashboard = lazy(() => import('./pages/dashboard/Dashboard'));
 const Details = lazy(() => import('./pages/Details'));
 const ProgressDetails = lazy(() => import('./pages/dashboard/ProgressDetails'));
 const Perspectives = lazy(() => import('./pages/Perspectives'));
-const PerspectiveDetails = lazy(() => import('./pages/perspectives/PerspectiveDetails'));
+const PerspectiveDetails = lazy(() => import('./pages/PerspectiveDetails'));
 const Tasks = lazy(() => import('./pages/Tasks'));
 const Documents = lazy(() => import('./pages/Documents'));
 const Reports = lazy(() => import('./pages/Reports'));
