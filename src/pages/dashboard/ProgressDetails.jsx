@@ -119,36 +119,37 @@ const ProgressDetails = () => {
             </div>
 
             {activeTab === 'overview' ? (
-                <div className="bg-white border border-[#E5E7EB] rounded-lg ">
-                    <Section
-                        title="Objective"
-                        content={details.objective}
-                    />
-                    <Section
-                        title="Implementation Requirements"
-                        content={
-                            <div className="space-y-2">
-                                {details.requirements.map((req, i) => (
-                                    <p key={i} className="leading-relaxed">{req}</p>
-                                ))}
-                            </div>
-                        }
-                    />
-                    <Section
-                        title="Evidence Documents"
-                        content="Submit The Approved Digital Transformation Strategy That Includes All The Requirements Of This Standard, Provided That It Has Been Approved Within A Period Not Exceeding 36 Months."
-                    />
-                    <Section
-                        title="Related Regulations"
-                        content={details.relatedRegulations}
-                    />
-                    <Section
-                        title="Scope"
-                        content={details.scope}
-                    />
-
+                <>
+                    <div className="bg-white border border-[#E5E7EB] rounded-lg ">
+                        <Section
+                            title="Objective"
+                            content={details.objective}
+                        />
+                        <Section
+                            title="Implementation Requirements"
+                            content={
+                                <div className="space-y-2">
+                                    {details.requirements.map((req, i) => (
+                                        <p key={i} className="leading-relaxed">{req}</p>
+                                    ))}
+                                </div>
+                            }
+                        />
+                        <Section
+                            title="Evidence Documents"
+                            content="Submit The Approved Digital Transformation Strategy That Includes All The Requirements Of This Standard, Provided That It Has Been Approved Within A Period Not Exceeding 36 Months."
+                        />
+                        <Section
+                            title="Related Regulations"
+                            content={details.relatedRegulations}
+                        />
+                        <Section
+                            title="Scope"
+                            content={details.scope}
+                        />
+                    </div>
                     {/* Leaders Footer */}
-                    <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm mt-8">
+                    <div className="bg-white rounded-lg p-6 border border-[#E5E7EB]  mt-4">
                         <h3 className="font-bold text-[#1D3557] mb-4">Leaders</h3>
                         <div className="flex flex-wrap gap-4">
                             {details.leaders.map((leader, i) => (
@@ -162,7 +163,7 @@ const ProgressDetails = () => {
                             ))}
                         </div>
                     </div>
-                </div>
+                </>
             ) : (
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {/* Left Column: Table & Comments */}
@@ -270,14 +271,14 @@ const StatBox = ({ icon, count, label }) => (
 );
 
 const Section = ({ title, content }) => (
-    <div className="flex flex-col divide-x divide-[#E5E7EB] md:flex-row   ">
-        <div className="w-fit pt-4  md:w-48 ps-6 pe-2 flex-shrink-0  text-[#1D3557] ">
+    <div className="flex flex-col first:pt-2 last:pb-2 divide-x divide-[#E5E7EB] md:flex-row   ">
+        <div className="w-fit py-2   md:w-48 ps-6 pe-2 flex-shrink-0  text-[#1D3557] ">
             <div className='text-md rounded-lg bg-[#F4F5F7] px-4 py-4 h-full my-auto'>
                 {title}
             </div>
         </div>
 
-        <div className="flex-1 text-sm ps-2 pe-6 pt-4 text-gray-600 leading-relaxed font-normal">
+        <div className="flex-1 py-2 text-sm ps-2 pe-6  text-gray-600 leading-relaxed font-normal">
             <div className='rounded-lg text-md font-normal bg-[#F4F5F7] px-4 py-2.5 h-full '>
                 {content}
             </div>

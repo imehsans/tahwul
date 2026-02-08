@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next'; // Since the project uses i18n
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import clsx from 'clsx';
 import { LogOut } from 'lucide-react';
+import useAppStore from '../../store';
 
 // Sidebar Icons
 import HomeIcon from '../../assets/icons/sidebar-icons/home.svg';
@@ -16,6 +17,8 @@ import Logo from '../../assets/images/logo-img/logo.png';
 const Sidebar = ({ isOpen, toggleSidebar, isDesktop }) => {
    const { t, i18n } = useTranslation();
    const location = useLocation();
+   const navigate = useNavigate();
+   const { logout } = useAppStore();
    const isRTL = i18n.dir() === 'rtl';
 
    const menuItems = [
@@ -26,6 +29,11 @@ const Sidebar = ({ isOpen, toggleSidebar, isDesktop }) => {
       { name: t('nav.reports') || 'Reports', icon: ReportsIcon, path: '/reports' },
       { name: t('nav.usersRoles') || 'Users & Roles', icon: UsersIcon, path: '/users' },
    ];
+
+   const handleLogout = () => {
+      logout();
+      navigate('/');
+   };
 
    return (
       <>
@@ -132,10 +140,7 @@ const Sidebar = ({ isOpen, toggleSidebar, isDesktop }) => {
                      "text-red-400  hover:text-white"
                   )}
                   title={!isOpen ? (t('auth.logout') || 'Logout') : ''}
-                  onClick={() => {
-                     // Add logout logic here
-                     console.log('Logout clicked');
-                  }}
+                  onClick={handleLogout}
                >
                   <LogOut className={clsx("min-w-[1.25rem]", isOpen ? "w-4 h-4" : "w-6 h-6")} />
 

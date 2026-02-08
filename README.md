@@ -2,6 +2,10 @@
 
 A modern, bilingual (English/Arabic), and responsive dashboard application designed for tracking digital transformation progress. Built with high performance and scalability in mind using the latest React ecosystem.
 
+- **Github Repo**: [https://github.com/imehsans/tahwul](https://github.com/imehsans/tahwul)
+- **Live Demo**: [https://tahwul-ass.netlify.app/](https://tahwul-ass.netlify.app/)
+
+
 ---
 
 ## 📋 Table of Contents
