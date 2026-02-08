@@ -1,0 +1,107 @@
+{
+   "nav": {
+      "dashboard": "Dashboard",
+      "projects": "Projects",
+      "reports": "Reports",
+      "settings": "Settings",
+      "perspectives": "Perspectives",
+      "tasks": "Tasks",
+      "documents": "Documents",
+      "usersRoles": "Users & Roles",
+      "search": "Search"
+   },
+   "dashboard": {
+      "title": "Dashboard",
+      "welcome": "Welcome back",
+      "overview": "Overview",
+      "projectTimeline": "Project Timeline",
+      "recentActivities": "Recent Activities",
+      "auditReadiness": "Audit Readiness",
+      "progressByPerspective": "Progress by Perspective"
+   },
+   "stats": {
+      "totalProjects": "Total Projects",
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "underReview": "Under Review",
+      "overallProgress": "Overall Progress"
+   },
+   "perspectives": {
+      "strategic": "Strategic Planning",
+      "operational": "Operational Excellence",
+      "financial": "Financial Management",
+      "customer": "Customer Focus",
+      "learning": "Learning & Growth"
+   },
+   "status": {
+      "notStarted": "Not Started",
+      "inProgress": "In Progress",
+      "underReview": "Under Review",
+      "completed": "Completed",
+      "blocked": "Blocked"
+   },
+   "details": {
+      "title": "Details",
+      "overview": "Overview",
+      "evidence": "Evidence",
+      "objective": "Objective",
+      "requirements": "Requirements",
+      "scope": "Scope",
+      "leaders": "Leaders",
+      "owners": "Owners",
+      "attachments": "Attachments",
+      "comments": "Comments"
+   },
+   "evidence": {
+      "total": "Total Evidence",
+      "inProgress": "In Progress",
+      "underReview": "Under Review",
+      "completed": "Completed"
+   },
+   "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete",
+      "add": "Add",
+      "save": "Save",
+      "cancel": "Cancel",
+      "export": "Export",
+      "import": "Import",
+      "filter": "Filter",
+      "search": "Search"
+   },
+   "common": {
+      "language": "Language",
+      "english": "English",
+      "arabic": "Arabic",
+      "loading": "Loading...",
+      "noData": "No data available",
+      "error": "An error occurred",
+      "success": "Success",
+      "downloadReport": "Download Report",
+      "viewDetails": "View Details"
+   },
+   "login": {
+      "welcome": "Welcome to The Namken Digital Transformation System",
+      "emailLabel": "Username or Email",
+      "emailPlaceholder": "Enter your username or email",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Password",
+      "forgotPassword": "Forgot Your Password?",
+      "loginButton": "Log In",
+      "loggingIn": "Logging in...",
+      "orEnterVia": "Or You Can Enter Via",
+      "nafathLogin": "Login Via National Access",
+      "copyright": "© All Rights Reserved - Transformation Enables Digital Transformation",
+      "errors": {
+         "emailRequired": "Email or Username is required",
+         "emailInvalid": "Please enter a valid email address",
+         "passwordRequired": "Password is required",
+         "passwordTooShort": "Password must be at least 6 characters",
+         "loginFailed": "Invalid credentials. Please try again."
+      }
+   },
+   "auth": {
+      "logout": "Logout"
+   }
+}

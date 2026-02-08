@@ -1,0 +1,107 @@
+{
+   "nav": {
+      "dashboard": "لوحة القيادة",
+      "projects": "المشاريع",
+      "reports": "التقارير",
+      "settings": "الإعدادات",
+      "perspectives": "المنظورات",
+      "tasks": "المهام",
+      "documents": "المستندات",
+      "usersRoles": "المستخدمين والأدوار",
+      "search": "بحث"
+   },
+   "dashboard": {
+      "title": "لوحة القيادة",
+      "welcome": "مرحباً بعودتك",
+      "overview": "نظرة عامة",
+      "projectTimeline": "الجدول الزمني للمشروع",
+      "recentActivities": "الأنشطة الأخيرة",
+      "auditReadiness": "الجاهزية للتدقيق",
+      "progressByPerspective": "التقدم حسب المنظور"
+   },
+   "stats": {
+      "totalProjects": "إجمالي المشاريع",
+      "completed": "مكتمل",
+      "inProgress": "قيد التنفيذ",
+      "underReview": "قيد المراجعة",
+      "overallProgress": "التقدم العام"
+   },
+   "perspectives": {
+      "strategic": "التخطيط الاستراتيجي",
+      "operational": "التميز التشغيلي",
+      "financial": "الإدارة المالية",
+      "customer": "التركيز على العملاء",
+      "learning": "التعلم والنمو"
+   },
+   "status": {
+      "notStarted": "لم يبدأ",
+      "inProgress": "قيد التنفيذ",
+      "underReview": "قيد المراجعة",
+      "completed": "مكتمل",
+      "blocked": "محظور"
+   },
+   "details": {
+      "title": "التفاصيل",
+      "overview": "نظرة عامة",
+      "evidence": "الأدلة",
+      "objective": "الهدف",
+      "requirements": "المتطلبات",
+      "scope": "النطاق",
+      "leaders": "القادة",
+      "owners": "المالكون",
+      "attachments": "المرفقات",
+      "comments": "التعليقات"
+   },
+   "evidence": {
+      "total": "إجمالي الأدلة",
+      "inProgress": "قيد التنفيذ",
+      "underReview": "قيد المراجعة",
+      "completed": "مكتمل"
+   },
+   "actions": {
+      "view": "عرض",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "add": "إضافة",
+      "save": "حفظ",
+      "cancel": "إلغاء",
+      "export": "تصدير",
+      "import": "استيراد",
+      "filter": "تصفية",
+      "search": "بحث"
+   },
+   "common": {
+      "language": "اللغة",
+      "english": "English",
+      "arabic": "العربية",
+      "loading": "جاري التحميل...",
+      "noData": "لا توجد بيانات متاحة",
+      "error": "حدث خطأ",
+      "success": "نجح",
+      "downloadReport": "تحميل التقرير",
+      "viewDetails": "عرض التفاصيل"
+   },
+   "login": {
+      "welcome": "مرحباً بك في نظام تمكين للتحول الرقمي",
+      "emailLabel": "اسم المستخدم أو البريد الإلكتروني",
+      "emailPlaceholder": "اسم المستخدم أو البريد الإلكتروني",
+      "passwordLabel": "كلمة المرور",
+      "passwordPlaceholder": "كلمة المرور",
+      "forgotPassword": "هل نسيت كلمة المرور؟",
+      "loginButton": "تسجيل الدخول",
+      "loggingIn": "جاري تسجيل الدخول...",
+      "orEnterVia": "أو يمكنك الدخول عبر",
+      "nafathLogin": "تسجيل الدخول عبر النفاذ الوطني",
+      "copyright": "© جميع الحقوق محفوظة - التحول يمكن التحول الرقمي",
+      "errors": {
+         "emailRequired": "البريد الإلكتروني أو اسم المستخدم مطلوب",
+         "emailInvalid": "يرجى إدخال عنوان بريد إلكتروني صالح",
+         "passwordRequired": "كلمة المرور مطلوبة",
+         "passwordTooShort": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+         "loginFailed": "بيانات الاعتماد غير صالحة. حاول مرة اخرى."
+      }
+   },
+   "auth": {
+      "logout": "تسجيل الخروج"
+   }
+}
