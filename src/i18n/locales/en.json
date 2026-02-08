@@ -8,16 +8,51 @@
       "tasks": "Tasks",
       "documents": "Documents",
       "usersRoles": "Users & Roles",
-      "search": "Search"
+      "search": "Search",
+      "profile": "Profile"
    },
    "dashboard": {
       "title": "Dashboard",
       "welcome": "Welcome back",
       "overview": "Overview",
       "projectTimeline": "Project Timeline",
+      "overallCompliance": {
+         "title": "Overall Progress",
+         "totalCriteria": "Total Criteria",
+         "completedCriteria": "Completed Criteria",
+         "evidenceDocuments": "Evidence Documents",
+         "evidenceCompleted": "Evidence (Completed)",
+         "uploadedToDGA": "Uploaded To DGA"
+      },
+      "progressByPerspective": "Progress by Perspective",
+      "complianceScore": "Overall Compliance Score",
+      "basicStandards": "Basic Standards 2025",
+      "topPerformingLeaders": "Top Performing Perspective Leaders",
+      "strategyPerspective": "Strategy Perspective",
+      "beneficiaryPerspective": "Beneficiary Perspective",
+      "itPerspective": "IT Perspective",
       "recentActivities": "Recent Activities",
       "auditReadiness": "Audit Readiness",
-      "progressByPerspective": "Progress by Perspective"
+      "readinessLevel": "Readiness Level",
+      "overdueStds": "Overdue Stds",
+      "missingEvidence": "Missing Evidence",
+      "12MonthPerformance": "12-Month Performance"
+   },
+   "timeline": {
+      "kickoffWorkshop": "Kickoff Workshop",
+      "dataCollection": "Data Collection",
+      "initialPhase": "Initial Phase",
+      "verification": "Verification",
+      "completionReviews": "Completion Reviews",
+      "cycleConclusion": "Cycle Conclusion"
+   },
+   "dates": {
+      "mar17": "Mar 17",
+      "march18": "March 18",
+      "may8": "May 8",
+      "may9july12": "May 9–July 12",
+      "july13": "July 13",
+      "august21": "August 21"
    },
    "stats": {
       "totalProjects": "Total Projects",
@@ -38,7 +73,48 @@
       "inProgress": "In Progress",
       "underReview": "Under Review",
       "completed": "Completed",
-      "blocked": "Blocked"
+      "blocked": "Blocked",
+      "partiallyUploaded": "Partially Uploaded",
+      "fullyUploaded": "Fully Uploaded",
+      "delayed": "Delayed"
+   },
+   "progressStatus": {
+      "title": "Progress Status",
+      "Strategy And Planning": "Strategy And Planning",
+      "Organization And Culture": "Organization And Culture",
+      "Operations And Execution": "Operations And Execution",
+      "Business Continuity": "Business Continuity",
+      "Information Technology": "Information Technology",
+      "Comprehensive Governance": "Comprehensive Governance",
+      "Channels And Services": "Channels And Services",
+      "Beneficiary Centralization": "Beneficiary Centralization",
+      "Government Data": "Government Data",
+      "Research And Innovation": "Research And Innovation",
+      "subTitles": {
+         "Digital Transformation": "Digital Transformation",
+         "Digital Governance": "Digital Governance",
+         "Enterprise Architecture": "Enterprise Architecture",
+         "Digital Culture And Environment": "Digital Culture And Environment",
+         "Leadership Development": "Leadership Development",
+         "Skills & Capacity Building": "Skills & Capacity Building",
+         "Business Processes": "Business Processes",
+         "Risk Management": "Risk Management",
+         "Business Continuity": "Business Continuity",
+         "Support Systems": "Support Systems",
+         "IT Infrastructure": "IT Infrastructure",
+         "Cloud Infrastructure": "Cloud Infrastructure",
+         "Governance Platforms": "Governance Platforms",
+         "Service Quality": "Service Quality",
+         "Digital Channels": "Digital Channels",
+         "User Engagement": "User Engagement",
+         "User Relationship": "User Relationship",
+         "User Experience": "User Experience",
+         "Data Governance": "Data Governance",
+         "Data Usage & Availability": "Data Usage & Availability",
+         "Open Data": "Open Data",
+         "Innovation": "Innovation",
+         "Creative Solutions": "Creative Solutions"
+      }
    },
    "details": {
       "title": "Details",

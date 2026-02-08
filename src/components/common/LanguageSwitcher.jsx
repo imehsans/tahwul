@@ -20,7 +20,7 @@ const LanguageSwitcher = () => {
 
    return (
       <div
-         className="inline-flex items-center p-1 bg-background border border-border rounded-full"
+         className="inline-flex items-center p-1 bg-[#F9FAFA] border border-[#E0E8ED] rounded-full"
          role="group"
          aria-label="Language switcher"
       >
@@ -29,7 +29,7 @@ const LanguageSwitcher = () => {
             type="button"
             onClick={() => toggleLanguage('en')}
             className={clsx(
-               'px-4 py-1.5 rounded-full text-base font-medium transition-all duration-200 font-ibm',
+               'px-4 py-0.5 rounded-full text-base font-medium transition-all duration-200 font-ibm',
                currentLang === 'en'
                   ? 'bg-white text-primary-500 shadow-sm'
                   : 'text-secondary-500 hover:text-primary-500'
@@ -50,7 +50,7 @@ const LanguageSwitcher = () => {
             type="button"
             onClick={() => toggleLanguage('ar')}
             className={clsx(
-               'px-4 py-1.5 rounded-full text-base font-medium transition-all duration-200 font-ibm',
+               'px-4 py-0.5 rounded-full text-base font-medium transition-all duration-200 font-ibm',
                currentLang === 'ar'
                   ? 'bg-white text-primary-500 shadow-sm'
                   : 'text-secondary-500 hover:text-primary-500'

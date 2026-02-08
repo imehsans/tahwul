@@ -29,7 +29,7 @@ const Navbar = ({ toggleSidebar, isSidebarOpen }) => {
    };
 
    return (
-      <header className="sticky top-0 z-30 bg-white border-b border-gray-200 h-20 shadow-sm">
+      <header className="sticky py-3.5 top-0 z-30 bg-white border-b border-[#E0E8ED]">
          <div className="flex items-center justify-between h-full px-4 sm:px-6 lg:px-8">
 
             {/* Left Side: Toggle & Search */}

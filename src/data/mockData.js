@@ -283,3 +283,185 @@ export const mockAuditReadiness = {
       { name: 'Training Records', score: 58, status: 'needsImprovement' }
    ]
 };
+
+export const mockProgressDetails = {
+   "1-0": {
+      id: "1-0",
+      title: "Digital Transformation Strategic Planning",
+      tag: "Strategy & Planning",
+      description: "Develop Comprehensive Strategic Plans For Digital Transformation Aligned With Organizational Goals",
+      progress: 100,
+      stats: {
+         totalEvidence: 4,
+         underReview: 3,
+         inProgress: 2,
+         completed: 1
+      },
+      objective: "Develop A Digital Transformation Strategy Aligned With The Organization's Strategy And The Objectives Of Saudi Vision 2030.",
+      requirements: [
+         "Prepare A Digital Transformation Strategy For The Transition To Electronic Government Transactions, Including The Following:",
+         "A. The Organization's Vision, Mission, Strategic Pillars, And Strategic Objectives, And Their Alignment With The Organization's Overall Strategy.",
+         "B. Strategic Initiatives, Programs, And Performance Indicators.",
+         "C. A Clear Methodology For Integration And Coordination With Relevant External Entities To Achieve The Strategy's Objectives.",
+         "D. Required Competencies, Capabilities, And Skills Necessary To Achieve The Strategy's Objectives."
+      ],
+      evidenceDocuments: [
+         { id: 1, name: "Strategy_Document_v1.pdf", status: "completed", date: "2024-01-15" },
+         { id: 2, name: "Stakeholder_Analysis.xlsx", status: "underReview", date: "2024-01-20" }
+      ],
+      relatedRegulations: "Council Of Ministers Resolution No. (40) Dated 27/2/1427H, Clause (16).",
+      scope: "All Government Entities.",
+      leaders: [
+         { name: "Ahmed Al-Ali", role: "Strategy Perspective", image: "https://ui-avatars.com/api/?name=Ahmed+Al-Ali&background=1D3557&color=fff" },
+         { name: "Ahmed Al-Ali", role: "Strategy Perspective", image: "https://ui-avatars.com/api/?name=Ahmed+Al-Ali&background=1D3557&color=fff" }
+      ],
+      evidenceTable: [
+         {
+            documentNumber: "5.4.1.1",
+            documentName: "Digital_Transformation_Plan.Pdf",
+            documentLead: "Ahmed Khaled",
+            documentPreparer: "Ahmed Khaled",
+            date: "2025-08-01",
+            dueDate: "2025-08-01",
+            status: "Approved",
+            statusColor: "bg-green-100 text-green-700"
+         },
+         {
+            documentNumber: "5.4.1.2",
+            documentName: "KPI_Framework.Xlsx",
+            documentLead: "Mona Hamed",
+            documentPreparer: "Mona Hamed",
+            date: "2025-08-01",
+            dueDate: "2025-08-01",
+            status: "Pending Review",
+            statusColor: "bg-yellow-50 text-yellow-600"
+         },
+         {
+            documentNumber: "5.4.1.3",
+            documentName: "Roadmap_Version1.Docx",
+            documentLead: "Rami AlSharif",
+            documentPreparer: "Rami AlSharif",
+            date: "2025-08-01",
+            dueDate: "2025-08-01",
+            status: "Pending Review",
+            statusColor: "bg-yellow-50 text-yellow-600"
+         }
+      ],
+      comments: [
+         {
+            id: 1,
+            user: "Sara Ibrahim",
+            image: "https://ui-avatars.com/api/?name=Sara+Ibrahim&background=E5E7EB&color=374151",
+            date: "2025-08-05",
+            content: "Ensure The Plan Includes A Clear Governance Model."
+         },
+         {
+            id: 2,
+            user: "Mona Hamed",
+            image: "https://ui-avatars.com/api/?name=Mona+Hamed&background=E5E7EB&color=374151",
+            date: "2025-08-05",
+            content: "Ensure The Plan Includes A Clear Governance Model."
+         }
+      ],
+      recentActivities: [
+         {
+            id: 1,
+            content: "Roadmap_Version1.Docx Uploaded By Rami AlSharif",
+            time: "5 Mins Ago"
+         },
+         {
+            id: 2,
+            content: "KPI_Framework.Xlsx Uploaded By Mona Hamed",
+            time: "20 Mins Ago"
+         },
+         {
+            id: 3,
+            content: "Digital_Transformation_Plan.Pdf Approved By Advisory Team",
+            time: "1 Hour Ago"
+         }
+      ]
+   }
+};
+
+export const getProgressDetails = async (id) => {
+   // Simulate API delay
+   await new Promise(resolve => setTimeout(resolve, 500));
+   return mockProgressDetails[id] || mockProgressDetails["1-0"];
+};
+
+export const mockPerspectivesList = [
+   { id: 1, title: 'Strategy And Planning', themes: 3, status: 'On Track', progress: 97.78 },
+   { id: 2, title: 'Organization And Culture', themes: 3, status: 'On Track', progress: 70.83 },
+   { id: 3, title: 'Operations And Execution', themes: 1, status: 'On Track', progress: 80.00 },
+   { id: 4, title: 'Business Continuity', themes: 2, status: 'On Track', progress: 97.78 },
+   { id: 5, title: 'Information Technology', themes: 3, status: 'On Track', progress: 70.83 },
+   { id: 6, title: 'Comprehensive Governance', themes: 1, status: 'On Track', progress: 80.00 },
+   { id: 7, title: 'Channels And Services', themes: 2, status: 'On Track', progress: 97.78 },
+   { id: 8, title: 'Beneficiary Centralization', themes: 3, status: 'Not Started', progress: 0 },
+   { id: 9, title: 'Government Data', themes: 3, status: 'On Track', progress: 80.00 },
+   { id: 10, title: 'Research And Innovation', themes: 2, status: 'At Risk', progress: 20.78 }
+];
+
+export const getPerspectiveDetails = async (id) => {
+   // Simulate API delay
+   await new Promise(resolve => setTimeout(resolve, 500));
+   const perspective = mockPerspectivesList.find(p => p.id === parseInt(id));
+
+   // Mock detailed data structure matching the image
+   const details = {
+      ...perspective,
+      themes: [
+         {
+            id: '5.1.1',
+            title: '5.1.1 - Digital Transformation',
+            standardsCount: 3,
+            isOpen: true, // Default open for first item
+            standards: [
+               {
+                  id: 1,
+                  number: 1,
+                  name: 'Strategic Planning For Digital Transformation',
+                  status: 'Completed',
+                  statusColor: 'text-green-500',
+                  numberColor: 'bg-green-500',
+                  link: '/details/1'
+               },
+               {
+                  id: 2,
+                  number: 2,
+                  name: 'Executive Planning For Digital Transformation',
+                  status: 'In Progress',
+                  statusColor: 'text-orange-500',
+                  numberColor: 'bg-orange-500',
+                  link: '/details/2'
+               },
+               {
+                  id: 3,
+                  number: 3,
+                  name: 'Establishing A Digital Transformation Project Management Unit',
+                  status: 'Delayed',
+                  statusColor: 'text-red-500',
+                  numberColor: 'bg-red-500',
+                  link: '/details/3'
+               }
+            ]
+         },
+         {
+            id: '5.1.2',
+            title: '5.1.2 - Digital Governance',
+            standardsCount: 4,
+            isOpen: false,
+            standards: [] // Add mock standards if needed
+         },
+         {
+            id: '5.1.4',
+            title: '5.1.4 - Enterprise Architecture',
+            standardsCount: 3,
+            isOpen: false,
+            standards: []
+         }
+      ]
+   };
+
+   return details;
+};

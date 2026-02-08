@@ -7,9 +7,11 @@ import { mockProjects, mockDashboardStats } from './data/mockData';
 
 // Lazy load pages for performance
 const Login = lazy(() => import('./pages/Login'));
-const Dashboard = lazy(() => import('./pages/Dashboard'));
+const Dashboard = lazy(() => import('./pages/dashboard/Dashboard'));
 const Details = lazy(() => import('./pages/Details'));
+const ProgressDetails = lazy(() => import('./pages/dashboard/ProgressDetails'));
 const Perspectives = lazy(() => import('./pages/Perspectives'));
+const PerspectiveDetails = lazy(() => import('./pages/perspectives/PerspectiveDetails'));
 const Tasks = lazy(() => import('./pages/Tasks'));
 const Documents = lazy(() => import('./pages/Documents'));
 const Reports = lazy(() => import('./pages/Reports'));
@@ -52,7 +54,9 @@ function App() {
           {/* Protected Routes */}
           <Route element={<ProtectedRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard/progress/:id" element={<ProgressDetails />} />
             <Route path="/perspectives" element={<Perspectives />} />
+            <Route path="/perspectives/:id" element={<PerspectiveDetails />} />
             <Route path="/tasks" element={<Tasks />} />
             <Route path="/documents" element={<Documents />} />
             <Route path="/reports" element={<Reports />} />

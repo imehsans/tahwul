@@ -40,7 +40,7 @@ const DashboardLayout = () => {
 
          {/* Main Content Wrapper */}
          <div
-            className={`flex-1 flex flex-col transition-all duration-300 ease-in-out
+            className={`flex-1 h-screen overflow-hidden flex flex-col transition-all duration-300 ease-in-out
           ${sidebarOpen && !isMobile ? 'ltr:lg:ml-64 rtl:lg:mr-64' : 'ltr:lg:ml-20 rtl:lg:mr-20'}
         `}
          >
@@ -51,7 +51,7 @@ const DashboardLayout = () => {
             />
 
             {/* Main Page Content */}
-            <main className="flex-1 overflow-x-hidden overflow-y-auto w-full p-4 sm:p-6 lg:p-8">
+            <main className="flex-1 w-full overflow-y-auto overflow-x-hidden p-4 md:py-4 md:px-6 ">
                {/* Renders the child route element */}
                <Outlet />
             </main>

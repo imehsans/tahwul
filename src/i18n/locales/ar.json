@@ -8,16 +8,51 @@
       "tasks": "المهام",
       "documents": "المستندات",
       "usersRoles": "المستخدمين والأدوار",
-      "search": "بحث"
+      "search": "بحث",
+      "profile": "الملف الشخصي"
    },
    "dashboard": {
       "title": "لوحة القيادة",
       "welcome": "مرحباً بعودتك",
       "overview": "نظرة عامة",
       "projectTimeline": "الجدول الزمني للمشروع",
+      "overallCompliance": {
+         "title": "التقدم العام",
+         "totalCriteria": "إجمالي المعايير",
+         "completedCriteria": "المعايير المكتملة",
+         "evidenceDocuments": "وثائق الأدلة",
+         "evidenceCompleted": "الأدلة (مكتملة)",
+         "uploadedToDGA": "تم الرفع إلى DGA"
+      },
+      "progressByPerspective": "التقدم حسب المنظور",
+      "complianceScore": "درجة الامتثال العام",
+      "basicStandards": "المعايير الأساسية ٢٠٢٥",
+      "topPerformingLeaders": "قادة المنظور الأفضل أداءً",
+      "strategyPerspective": "منظور الاستراتيجية",
+      "beneficiaryPerspective": "منظور المستفيد",
+      "itPerspective": "منظور تقنية المعلومات",
       "recentActivities": "الأنشطة الأخيرة",
-      "auditReadiness": "الجاهزية للتدقيق",
-      "progressByPerspective": "التقدم حسب المنظور"
+      "auditReadiness": "جاهزية التدقيق",
+      "readinessLevel": "مستوى الجاهزية",
+      "overdueStds": "معايير متأخرة",
+      "missingEvidence": "أدلة مفقودة",
+      "12MonthPerformance": "أداء ١٢ شهر"
+   },
+   "timeline": {
+      "kickoffWorkshop": "ورشة العمل الافتتاحية",
+      "dataCollection": "جمع البيانات",
+      "initialPhase": "المرحلة الأولية",
+      "verification": "التحقق",
+      "completionReviews": "مراجعات الإكمال",
+      "cycleConclusion": "اختتام الدورة"
+   },
+   "dates": {
+      "mar17": "١٧ مارس",
+      "march18": "١٨ مارس",
+      "may8": "٨ مايو",
+      "may9july12": "٩ مايو - ١٢ يوليو",
+      "july13": "١٣ يوليو",
+      "august21": "٢١ أغسطس"
    },
    "stats": {
       "totalProjects": "إجمالي المشاريع",
@@ -38,7 +73,48 @@
       "inProgress": "قيد التنفيذ",
       "underReview": "قيد المراجعة",
       "completed": "مكتمل",
-      "blocked": "محظور"
+      "blocked": "محظور",
+      "partiallyUploaded": "مرفوع جزئياً",
+      "fullyUploaded": "مرفوع بالكامل",
+      "delayed": "متأخر"
+   },
+   "progressStatus": {
+      "title": "حالة التقدم",
+      "Strategy And Planning": "الاستراتيجية والتخطيط",
+      "Organization And Culture": "التنظيم والثقافة",
+      "Operations And Execution": "العمليات والتنفيذ",
+      "Business Continuity": "استمرارية الأعمال",
+      "Information Technology": "تقنية المعلومات",
+      "Comprehensive Governance": "الحوكمة الشاملة",
+      "Channels And Services": "القنوات والخدمات",
+      "Beneficiary Centralization": "مركزية المستفيد",
+      "Government Data": "البيانات الحكومية",
+      "Research And Innovation": "البحث والابتكار",
+      "subTitles": {
+         "Digital Transformation": "التحول الرقمي",
+         "Digital Governance": "الحوكمة الرقمية",
+         "Enterprise Architecture": "هندسة المؤسسة",
+         "Digital Culture And Environment": "الثقافة والبيئة الرقمية",
+         "Leadership Development": "تطوير القيادة",
+         "Skills & Capacity Building": "تطوير المهارات والقدرات",
+         "Business Processes": "عمليات الأعمال",
+         "Risk Management": "إدارة المخاطر",
+         "Business Continuity": "استمرارية الأعمال",
+         "Support Systems": "أنظمة الدعم",
+         "IT Infrastructure": "البنية التحتية لتقنية المعلومات",
+         "Cloud Infrastructure": "البنية التحتية السحابية",
+         "Governance Platforms": "منصات الحوكمة",
+         "Service Quality": "جودة الخدمة",
+         "Digital Channels": "القنوات الرقمية",
+         "User Engagement": "مشاركة المستخدم",
+         "User Relationship": "علاقات المستخدم",
+         "User Experience": "تجربة المستخدم",
+         "Data Governance": "حوكمة البيانات",
+         "Data Usage & Availability": "استخدام وتوفر البيانات",
+         "Open Data": "البيانات المفتوحة",
+         "Innovation": "الابتكار",
+         "Creative Solutions": "الحلول الإبداعية"
+      }
    },
    "details": {
       "title": "التفاصيل",
