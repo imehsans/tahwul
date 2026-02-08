@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import Card from '../../../components/common/Card';
 
 const ProgressStatus = () => {
    const { t } = useTranslation();

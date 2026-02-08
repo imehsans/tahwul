@@ -76,7 +76,7 @@ const YearlyPerformance = () => {
             shade: 'light',
             type: "vertical",
             shadeIntensity: 0.25,
-            gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
+            gradientToColors: undefined,  
             inverseColors: true,
             opacityFrom: 0.85,
             opacityTo: 0.85,

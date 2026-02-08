@@ -2,20 +2,7 @@ import PropTypes from 'prop-types';
 import { useState, forwardRef } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import clsx from 'clsx';
-
-/**
- * Input Component
- * 
- * A reusable, accessible input component with support for:
- * - Text, email, password types
- * - Label and placeholder
- * - Error states
- * - Password visibility toggle
- * - Full form validation support
- * - RTL languages
- * 
- * @component
- */
+ 
 const Input = forwardRef(({
    label,
    type = 'text',
@@ -125,49 +112,16 @@ const Input = forwardRef(({
 Input.displayName = 'Input';
 
 Input.propTypes = {
-   /**
-    * Input label text
-    */
    label: PropTypes.string,
-   /**
-    * Input type
-    */
    type: PropTypes.oneOf(['text', 'email', 'password', 'number', 'tel']),
-   /**
-    * Input name attribute
-    */
    name: PropTypes.string.isRequired,
-   /**
-    * Input value
-    */
    value: PropTypes.string,
-   /**
-    * Change handler
-    */
    onChange: PropTypes.func,
-   /**
-    * Blur handler
-    */
    onBlur: PropTypes.func,
-   /**
-    * Placeholder text
-    */
    placeholder: PropTypes.string,
-   /**
-    * Error message
-    */
    error: PropTypes.string,
-   /**
-    * Required field
-    */
    required: PropTypes.bool,
-   /**
-    * Disabled state
-    */
    disabled: PropTypes.bool,
-   /**
-    * Additional CSS classes
-    */
    className: PropTypes.string,
 };
 

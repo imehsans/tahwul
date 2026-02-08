@@ -17,19 +17,6 @@ import {
    Share2
 } from 'lucide-react';
 
-/**
- * Project Details Page Component
- * 
- * Displays comprehensive project information including:
- * - Project metadata and status
- * - Progress tracking
- * - Evidence management
- * - Team information
- * - Tab-based content organization
- * 
- * Uses semantic HTML and ARIA labels for accessibility
- * @component
- */
 const Details = () => {
    const { id } = useParams();
    const navigate = useNavigate();
@@ -39,11 +26,6 @@ const Details = () => {
    // Get project data from mock data or default to first project
    const project = mockProjects.find(p => p.id === parseInt(id)) || mockProjects[0];
 
-   /**
-    * Get appropriate badge variant based on project status
-    * @param {string} status - Project status
-    * @returns {string} Badge variant
-    */
    const getStatusBadgeVariant = (status) => {
       const variantMap = {
          completed: 'success',
@@ -54,11 +36,6 @@ const Details = () => {
       return variantMap[status] || 'gray';
    };
 
-   /**
-    * Get appropriate badge variant based on business perspective
-    * @param {string} perspective - Business perspective
-    * @returns {string} Badge variant
-    */
    const getPerspectiveBadgeVariant = (perspective) => {
       const variantMap = {
          strategic: 'primary',

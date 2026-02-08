@@ -126,13 +126,18 @@
       "leaders": "Leaders",
       "owners": "Owners",
       "attachments": "Attachments",
-      "comments": "Comments"
+      "comments": "Comments",
+      "relatedRegulations": "Related Regulations"
    },
    "evidence": {
       "total": "Total Evidence",
       "inProgress": "In Progress",
       "underReview": "Under Review",
-      "completed": "Completed"
+      "completed": "Completed",
+      "documentNumber": "Document Number",
+      "documentName": "Document Name",
+      "documentLead": "Document Lead",
+      "documentPreparer": "Document Preparer"
    },
    "actions": {
       "view": "View",
@@ -155,7 +160,10 @@
       "error": "An error occurred",
       "success": "Success",
       "downloadReport": "Download Report",
-      "viewDetails": "View Details"
+      "viewDetails": "View Details",
+      "date": "Date",
+      "dueDate": "Due Date",
+      "status": "Status"
    },
    "login": {
       "welcome": "Welcome to The Namken Digital Transformation System",

@@ -13,20 +13,6 @@ import {
 } from 'lucide-react';
 import clsx from 'clsx';
 
-/**
- * Layout Component
- * 
- * Main application layout wrapper providing:
- * - Responsive sidebar navigation
- * - Mobile menu support
- * - Semantic HTML structure
- * - ARIA labels for accessibility
- * - Language switcher integration
- * 
- * @component
- * @param {Object} props
- * @param {React.ReactNode} props.children - Page content to render
- */
 const Layout = ({ children }) => {
    const { t } = useTranslation();
    const location = useLocation();
@@ -170,9 +156,6 @@ const Layout = ({ children }) => {
 };
 
 Layout.propTypes = {
-   /**
-    * Child components to render within the layout
-    */
    children: PropTypes.node.isRequired
 };
 

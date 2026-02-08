@@ -1,5 +1,4 @@
-import { useTranslation } from 'react-i18next';
-import StatCard from '../../components/dashboard/StatCard';
+import { useTranslation } from 'react-i18next'; 
 import ProjectTimeline from './components/ProjectTimeline';
 import ProgressStatus from './components/ProgressStatus';
 import ComplianceScore from './components/ComplianceScore';
@@ -7,15 +6,6 @@ import TopPerformingLeaders from './components/TopPerformingLeaders';
 import RecentActivities from './components/RecentActivities';
 import YearlyPerformance from './components/YearlyPerformance';
 import AuditReadiness from './components/AuditReadiness';
-import PerspectivesProgress from '../../components/dashboard/PerspectivesProgress';
-import { mockDashboardStats } from '../../data/mockData';
-import {
-   FolderKanban,
-   CheckCircle,
-   Clock,
-   FileSearch,
-   TrendingUp
-} from 'lucide-react';
 
 import OverallCompliance from './components/OverallCompliance';
 

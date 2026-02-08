@@ -1,7 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-
-// Import Dashboard Icons
 import OverallProgressIcon from '../../../assets/icons/dashboard-icon/overall-progress.svg';
 import TotalCriteriaIcon from '../../../assets/icons/dashboard-icon/total-creteria.svg';
 import CompletedCriteriaIcon from '../../../assets/icons/dashboard-icon/completed-creteria.svg';

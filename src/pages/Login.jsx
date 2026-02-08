@@ -6,8 +6,6 @@ import Input from '../components/common/Input';
 import Button from '../components/common/Button';
 import LanguageSwitcher from '../components/common/LanguageSwitcher';
 
-// ... comments ...
-
 const Login = () => {
    const { t } = useTranslation();
    const navigate = useNavigate();
@@ -76,10 +74,7 @@ const Login = () => {
          setIsSubmitting(false);
       }
    };
-
-   /**
-    * Handle Nafath login
-    */
+ 
    const handleNafathLogin = () => {
       // TODO: Implement Nafath authentication
       console.log('Nafath login initiated');

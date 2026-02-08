@@ -43,8 +43,6 @@ const Navbar = ({ toggleSidebar, isSidebarOpen }) => {
                   <Menu className="w-6 h-6" />
                </button>
 
-
-
                {/* Search Bar */}
                <div className="relative hidden sm:block max-w-md w-full ml-4">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">

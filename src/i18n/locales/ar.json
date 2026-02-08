@@ -126,13 +126,18 @@
       "leaders": "القادة",
       "owners": "المالكون",
       "attachments": "المرفقات",
-      "comments": "التعليقات"
+      "comments": "التعليقات",
+      "relatedRegulations": "اللوائح ذات الصلة"
    },
    "evidence": {
       "total": "إجمالي الأدلة",
       "inProgress": "قيد التنفيذ",
       "underReview": "قيد المراجعة",
-      "completed": "مكتمل"
+      "completed": "مكتمل",
+      "documentNumber": "رقم المستند",
+      "documentName": "اسم المستند",
+      "documentLead": "قائد المستند",
+      "documentPreparer": "مُعِد المستند"
    },
    "actions": {
       "view": "عرض",
@@ -155,7 +160,10 @@
       "error": "حدث خطأ",
       "success": "نجح",
       "downloadReport": "تحميل التقرير",
-      "viewDetails": "عرض التفاصيل"
+      "viewDetails": "عرض التفاصيل",
+      "date": "التاريخ",
+      "dueDate": "تاريخ الاستحقاق",
+      "status": "الحالة"
    },
    "login": {
       "welcome": "مرحباً بك في نظام تمكين للتحول الرقمي",

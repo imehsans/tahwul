@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import Card from '../../../components/common/Card';
 
 const RecentActivities = () => {
    const { t } = useTranslation();

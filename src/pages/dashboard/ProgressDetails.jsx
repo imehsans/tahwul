@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
+import { useTranslation } from 'react-i18next';
 import { getProgressDetails } from '../../data/mockData';
-import { ArrowLeft, FileText, CheckCircle, Clock, FileCheck } from 'lucide-react';
+import { ArrowLeft, FileText } from 'lucide-react';
 
 import totalEvedance from '../../assets/icons/dashboard-icon/total-evedance-1.svg';
 import underReview from '../../assets/icons/dashboard-icon/under-review-evediance.svg';
@@ -12,6 +13,7 @@ import completed from '../../assets/icons/dashboard-icon/completed-evedance.svg'
 const ProgressDetails = () => {
     const { id } = useParams();
     const navigate = useNavigate();
+    const { t } = useTranslation();
     const [activeTab, setActiveTab] = useState('overview');
 
     const { data: details, isLoading } = useQuery({
@@ -27,23 +29,33 @@ const ProgressDetails = () => {
         );
     }
 
-    if (!details) return <div>Not found</div>;
+    if (!details) return <div>{t('common.noData')}</div>;
 
+    // Helper to translate dynamic content if keys exist, else return content
+    const translateOrReturn = (text) => {
+        const map = {
+            "Digital Transformation Strategy": t('progressStatus.subTitles.Digital Transformation'),
+            "Governance": t('progressStatus.subTitles.Digital Governance'),
+             "Leadership": t('progressStatus.subTitles.Leadership Development')
+        };
+        return map[text] || text;
+    };
+    
     return (
         <div className="">
             {/* Back Button & Title */}
             <div className="flex items-center gap-2 mb-4 cursor-pointer w-fit" onClick={() => navigate(-1)}>
-                <ArrowLeft className="w-4 h-4 text-[#1D3557]" />
-                <h1 className="text-2xl font-bold text-[#1D3557]">{details.title}</h1>
+                <ArrowLeft className="w-4 h-4 text-[#1D3557] rtl:rotate-180" />
+                <h1 className="text-2xl font-bold text-[#1D3557]">{translateOrReturn(details.title)}</h1>
             </div>
 
             {/* Top Card */}
             <div className="bg-white rounded-lg p-4 border border-[#E5E7EB] shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-4">
                 <div>
                     <span className=" px-2.5 mb-2 py-1 rounded-full text-md  border text-[#8597A8] border-[#E5E7EB]">
-                        {details.tag}
+                        {translateOrReturn(details.tag)}
                     </span>
-                    <h2 className="text-2xl font-bold text-[#1D3557]  mt-2">{details.title}</h2>
+                    <h2 className="text-2xl font-bold text-[#1D3557]  mt-2">{translateOrReturn(details.title)}</h2>
                     <p className="text-md text-[#8597A8] mt-2">{details.description}</p>
                 </div>
 
@@ -81,22 +93,22 @@ const ProgressDetails = () => {
                 <StatBox
                     icon={<span className="text-red-500 w-full h-full" ><img src={totalEvedance} alt="" /></span>}
                     count={details.stats.totalEvidence}
-                    label="Total Evidence"
+                    label={t('evidence.total')}
                 />
                 <StatBox
                     icon={<span className="text-orange-500 w-full h-full" ><img src={underReview} alt="" /></span>}
                     count={details.stats.underReview}
-                    label="Under Review Evidence"
+                    label={t('evidence.underReview')}
                 />
                 <StatBox
                     icon={<span className="text-red-400 w-full h-full" ><img src={inProgress} alt="" /></span>}
                     count={details.stats.inProgress}
-                    label="In Progress Evidence"
+                    label={t('evidence.inProgress')}
                 />
                 <StatBox
                     icon={<span className="text-green-500 w-full h-full" ><img src={completed} alt="" /></span>}
                     count={details.stats.completed}
-                    label="Completed Evidence"
+                    label={t('evidence.completed')}
                 />
             </div>
 
@@ -107,14 +119,14 @@ const ProgressDetails = () => {
                     className={`px-6 py-2 rounded-md text-md  transition-all ${activeTab === 'overview' ? 'bg-white shadow-sm text-[#1D3557]' : 'text-[#8597A8] hover:text-gray-700'
                         }`}
                 >
-                    Overview
+                    {t('details.overview')}
                 </button>
                 <button
                     onClick={() => setActiveTab('evidence')}
                     className={`px-6 py-2 rounded-md text-md  transition-all ${activeTab === 'evidence' ? 'bg-white shadow-sm text-[#1D3557]' : 'text-[#8597A8] hover:text-gray-700'
                         }`}
                 >
-                    Evidence
+                    {t('details.evidence')}
                 </button>
             </div>
 
@@ -122,11 +134,11 @@ const ProgressDetails = () => {
                 <>
                     <div className="bg-white border border-[#E5E7EB] rounded-lg ">
                         <Section
-                            title="Objective"
+                            title={t('details.objective')}
                             content={details.objective}
                         />
                         <Section
-                            title="Implementation Requirements"
+                            title={t('details.requirements')}
                             content={
                                 <div className="space-y-2">
                                     {details.requirements.map((req, i) => (
@@ -136,21 +148,21 @@ const ProgressDetails = () => {
                             }
                         />
                         <Section
-                            title="Evidence Documents"
-                            content="Submit The Approved Digital Transformation Strategy That Includes All The Requirements Of This Standard, Provided That It Has Been Approved Within A Period Not Exceeding 36 Months."
+                            title={t('dashboard.overallCompliance.evidenceDocuments')} // Reusing existing key or adjust
+                            content={"Submit The Approved Digital Transformation Strategy That Includes All The Requirements Of This Standard, Provided That It Has Been Approved Within A Period Not Exceeding 36 Months."} 
                         />
                         <Section
-                            title="Related Regulations"
+                            title={t('details.relatedRegulations')}  
                             content={details.relatedRegulations}
                         />
                         <Section
-                            title="Scope"
+                            title={t('details.scope')}
                             content={details.scope}
                         />
                     </div>
                     {/* Leaders Footer */}
                     <div className="bg-white rounded-lg p-6 border border-[#E5E7EB]  mt-4">
-                        <h3 className="font-bold text-[#1D3557] mb-4">Leaders</h3>
+                        <h3 className="font-bold text-[#1D3557] mb-4">{t('details.leaders')}</h3>
                         <div className="flex flex-wrap gap-4">
                             {details.leaders.map((leader, i) => (
                                 <div key={i} className="flex items-center gap-3 bg-gray-50 p-3 pr-6 rounded-lg border border-gray-100">
@@ -173,13 +185,13 @@ const ProgressDetails = () => {
                             <table className="w-full text-left text-sm whitespace-nowrap">
                                 <thead className="bg-gray-50 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">
                                     <tr>
-                                        <th className="px-6 py-4">Document Number</th>
-                                        <th className="px-6 py-4">Document Name</th>
-                                        <th className="px-6 py-4">Document Lead</th>
-                                        <th className="px-6 py-4">Document Preparer</th>
-                                        <th className="px-6 py-4">Date</th>
-                                        <th className="px-6 py-4">Due Date</th>
-                                        <th className="px-6 py-4">Status</th>
+                                        <th className="px-6 py-4">{t('evidence.documentNumber')}</th>
+                                        <th className="px-6 py-4">{t('evidence.documentName')}</th>
+                                        <th className="px-6 py-4">{t('evidence.documentLead')}</th>
+                                        <th className="px-6 py-4">{t('evidence.documentPreparer')}</th>
+                                        <th className="px-6 py-4">{t('common.date')}</th>
+                                        <th className="px-6 py-4">{t('common.dueDate')}</th>
+                                        <th className="px-6 py-4">{t('common.status')}</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
@@ -204,7 +216,7 @@ const ProgressDetails = () => {
 
                         {/* Comments Section */}
                         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                            <h3 className="font-bold text-[#1D3557] mb-6">Comments</h3>
+                                <h3 className="font-bold text-[#1D3557] mb-6">{t('details.comments')}</h3>
                             <div className="space-y-6 mb-6">
                                 {details.comments?.map((comment) => (
                                     <div key={comment.id} className="flex gap-4 p-4 border border-gray-100 rounded-xl bg-gray-50/30">
@@ -223,11 +235,11 @@ const ProgressDetails = () => {
                             {/* Post Comment Input */}
                             <div className="space-y-3">
                                 <textarea
-                                    placeholder="Write your comment here..."
+                                        placeholder={t('actions.add') + " " + t('details.comments') + "..."}
                                     className="w-full p-4 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-primary-300 resize-none min-h-[100px]"
                                 ></textarea>
                                 <button className="bg-[#1D3557] text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#152a45] transition-colors flex items-center gap-2">
-                                    <FileText className="w-4 h-4" /> Post Comment
+                                        <FileText className="w-4 h-4" /> {t('actions.add')}
                                 </button>
                             </div>
                         </div>
@@ -236,11 +248,11 @@ const ProgressDetails = () => {
                     {/* Right Column: Recent Activities */}
                     <div className="lg:col-span-1">
                         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                            <h3 className="font-bold text-[#1D3557] mb-6">Recent Activities</h3>
+                                <h3 className="font-bold text-[#1D3557] mb-6">{t('dashboard.recentActivities')}</h3>
                             <div className="space-y-6">
                                 {details.recentActivities?.map((activity) => (
-                                    <div key={activity.id} className="relative pl-6 pb-6 border-l border-gray-100 last:pb-0 last:border-0">
-                                        <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-red-500 ring-4 ring-white"></div>
+                                    <div key={activity.id} className="relative pl-6 pb-6 border-l border-gray-100 last:pb-0 last:border-0 rtl:border-l-0 rtl:border-r rtl:pl-0 rtl:pr-6">
+                                        <div className="absolute left-[-5px] rtl:right-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-red-500 ring-4 ring-white"></div>
                                         <div className="flex flex-col gap-1">
                                             <p className="text-sm font-medium text-[#1D3557] leading-tight">
                                                 {activity.content}
@@ -271,7 +283,7 @@ const StatBox = ({ icon, count, label }) => (
 );
 
 const Section = ({ title, content }) => (
-    <div className="flex flex-col first:pt-2 last:pb-2 divide-x divide-[#E5E7EB] md:flex-row   ">
+    <div className="flex flex-col first:pt-2 last:pb-2 divide-x divide-[#E5E7EB] md:flex-row rtl:divide-x-reverse">
         <div className="w-fit py-2   md:w-48 ps-6 pe-2 flex-shrink-0  text-[#1D3557] ">
             <div className='text-md rounded-lg bg-[#F4F5F7] px-4 py-4 h-full my-auto'>
                 {title}
